@@ -98,132 +98,146 @@ During Lesson1,you have learned how to create directories.
 
 Lets learn to create a new file,
 
-touch file1.txt
+`touch file1.txt`
+
 and press enter key and read on :)
 
-title: touch
+`title: touch`
 
-touch command will create a new file or change time stamp of an existing file. Now try again,
+`touch` command will create a new file or change time stamp of an existing file. Now try again,
 
-touch  file1.txt
-this time it will change file1.txt created/last access and modified time to current time.
+`touch  file1.txt`
 
-touch file2.txt
-will create an empty new file ,if the file is not already exists. to view directory contents ,you can also use
+this time it will change `file1.txt` created/last access and modified time to current time.
 
-    dir
-title: dir
+`touch file2.txt`
 
-dir is used to list directory contents.Yeah,as you guessed it correctly , dir is equivalent to ls -C -b (I know you didn't guess that :P)
+will create an empty new file, if the file is not already exists. to view directory contents ,you can also use
 
-that is, by default files are listed in columns, sorted vertically, and special characters are represented by backslash escape sequences. To clear a screen,the command is
+`dir`
 
-clear
-title: clear
+`title: dir`
+
+dir is used to list directory contents. Yeah,as you guessed it correctly, `dir` is equivalent to `ls -C -b` (I know you didn't guess that :P)
+
+that is, by default files are listed in columns, sorted vertically, and special characters are represented by backslash escape sequences. To clear a screen, the command is
+
+`clear`
+`title: clear`
 
 Viola! terminal screen is cleared!!! Lets print some message on the terminal,
 
-echo "hello"
-title: echo
+`echo "hello"`
+`title: echo`
 
 Cool! the message is displayed on the screen. Lets redirect the message to a new file instead of screen.
 
-echo "hello" > hello.txt
-To append data you must use >> not just >
+`echo "hello" > hello.txt`
 
+To **append** data you must use `>>` not just `>`
+
+```
 echo "linux" >> hello.txt 
 echo "world" >> hello.txt
-Done.To view the file content ,do
+```
 
-cat hello.txt
-title: cat
+Done. to view the file content, do
 
-so now you have viewed the file content.cat is used to display the entire file content.
+`cat hello.txt`
+`title: cat`
+
+so now you have viewed the file content. `cat` is used to display the entire file content.
 
 To view only first two lines from the file
 
-head -2 hello.txt
-title: head
+`head -2 hello.txt`
+`title: head`
 
-see,it showed us first two lines from files. By default,head will display the first 10 lines when you run,
+see, it showed us first two lines from files. By **default**, `head` will display the first 10 lines when you run,
 
-head hello.txt
-Now how to view last two lines?.Its simple,use tail
+`head hello.txt`
 
-tail -2 hello.txt
-title: tail
+Now how to view last two lines?. Its simple, use `tail`
 
-cool. Thus head will be used to display lines from begining and tail will be used to display last few lines. As with head
+`tail -2 hello.txt`
+`title: tail`
 
-tail hello.txt
+cool. Thus `head` will be used to display lines from **begining** and `tail` will be used to display **last few lines**. As with head
+
+`tail hello.txt`
+
 by default will display last 10 lines from the line.
 
 Lets check some stats of the files and directories we have create so far.
 
-stat hello.txt
-title: stat
+`stat hello.txt`
+`title: stat`
 
-carefully examine few important fields the output. The first line shows the filename.second line says its a regular file with size as 18.Third line shows Inode number and no.of links to that inode.
+carefully examine few important fields the output. The **first line** shows the **filename**. second line says its a regular file with size as 18. Third line shows Inode number and no. of links to that inode. Fourth one,says __owner(Uid)__, __group(Gid)__ who has read-write permission but other have read permission. Final three lines show access, modified and change time. They mean:
 
-Fourth one,says owner(Uid),group(Gid) who has read-write permission but other have read permission.Final three lines show access,modified and change time.They mean:
+- access - when the file was last accessed/read.
+- modified - when the contents was last modified written.
+- change - denotes changes to files metadata like changing user permission.
 
-access - when the file was last accessed/read.
-modified - when the contents was last 
-     modified written.
-change - denotes changes to files metadata
-    like changing user permission.
-Now lets do a stat on directory.
+Now lets do a `stat` on directory.
 
-stat dir1
-Compare the previous stat "hello.txt" output with "dir1",before you move. especially find out "dir1" type.That marks the end of lesson2!.Well done.
+`stat dir1`
 
-Now move to lesson3.
+Compare the previous stat "hello.txt" output with "dir1", before you move. especially find out "dir1" type. That marks the end of lesson2!. Well done!!
+
+Now move to lesson-3.
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-### Lesson3 - Copy,rename,delete files
 
-On Lesson1,you learned about directories. With Lesson2,you learned about files. Now lets learn general file operations.
+### Lesson3 - Copy, rename, delete files
+
+On Lesson-1, you learned about directories. With Lesson-2, you learned about files. Now lets learn general file operations.
 
 Now check this command
 
-du
-title: du
+`du`
+`title: du`
 
-it displays the disk usage of current directory.(Please note the current total of du output).Use the h switch to output in a human readable format and the x switch to exclude other file systems and ~ denotes your home.
+It displays the **disk usage** of current directory. (Please note the current total of `du` output). Use the `h` switch to output in a human readable format and the `x` switch to exclude other file systems and `~` denotes your home.
 
-du -xh ~
-Tips and tricks:
+`du -xh ~`
 
-du can take a long time so you can specify the max.directory depth using "--max-depth" option.
+**Tips and tricks**:
 
-du --max-depth 3 ~
-Now lets copy hello.txt to dir2 directory.
+`du` can take a long time so you can specify the max. directory depth using `--max-depth` option.
 
-cp -v hello.txt dir2
-title: cp
+`du --max-depth 3 ~`
 
-now file is copied to new location.Now compute the usage again using, du now you should see usage has been increased by file size.
+Now lets copy `hello.txt` to `dir2` directory.
 
-Tips and tricks:
+`cp -v hello.txt dir2`
+`title: cp`
 
- cp -v hello.txt dir2/file2.txt
-This will copy hello.txt into dir2 at the same time, rename it as "file2.txt".
+Now file is copied to new location. Now compute the usage again using, `du` now you should see usage has been increased by file size.
 
-cp  -vr dir2/*.txt dir2/dir3
-This will copy all files ending with ".txt" from dir2 into dir2/dir3.
+**Tips and tricks**:
 
-cp -vr dir2/dir3  .
-This will copy the directory named "dir3" to current directory.
+`cp -v hello.txt dir2/file2.txt`
 
-Use ls,it should show you dir3.
+This will copy `hello.txt` into `dir2` at the same time, rename it as `file2.txt`.
 
-now we have copied few files,how do we verify its file integrity?simple cat should be enough.But If its large file or binary file,we can't use cat.We have to use,
+`cp  -vr dir2/*.txt dir2/dir3`
 
-md5sum hello.txt
-title: md5sum
+This will copy all files ending with `.txt` from `dir2` into `dir2/dir3`.
 
-b8d5079c5d6a9dbb3294b31d318d74c0 is the calculated checksum for a file.This helps with detecting accidental or deliberate file corruption.
+`cp -vr dir2/dir3`
+
+This will copy the directory named `dir3` to current directory.
+
+Use `ls`, it should show you `dir3`.
+
+now we have copied few files, how do we verify its file integrity? simple cat should be enough. But If its large file or binary file, we can't use `cat`. We have to use,
+
+`md5sum hello.txt`
+`title: md5sum`
+
+`b8d5079c5d6a9dbb3294b31d318d74c0` is the calculated checksum for a file. This helps with detecting accidental or deliberate file corruption.
 
 When transfering a file from machine to another or downloading files from internet,to verify the file integrity compare md5sum on source and destination machines,
 

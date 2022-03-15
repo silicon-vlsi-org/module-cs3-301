@@ -253,51 +253,57 @@ now lets move to another command,
 
 will move a file into directory `dir4` and names it as `hi.txt`. so how `mv` is different from `cp`?. Try `ls` it will not show `hello.txt`.
 
-When you use cp there exists two copies of a file (similar to copy-paste "ctrl-c" and "ctrl-v") with mv there is one copy (its cut-paste ctrl-x and ctrl-v). unlike (cp,rm) other commands mv don't need "-r" for directories.
+When you use `cp` there exists two copies of a file (similar to copy-paste "ctrl-c" and "ctrl-v") with `mv` there is one copy (its cut-paste ctrl-x and ctrl-v). unlike (`cp, rm`) other commands mv don't need `-r` for directories.
 
-create a new directory dir5
+create a new directory `dir5`
 
-mkdir dir5
+`mkdir dir5`
+
 now
 
-mv dir2/*.txt dir5
-mv dir5  dir50
-will move all "*.txt" files under dir2 into dir5. then rename the directory "dir5" as "dir50".
+`mv dir2/*.txt dir5`
+`mv dir5  dir50`
 
-with mv command we moved hello.txt under dir4,instead of accessing them as dir2/dir3/dir4/hi.txt everytime,we can create a link and after that,you can access or edit dir2/dir3/dir4/hi.txt file as simply hello
+will move all `\*.txt` files under `dir2` into `dir5`. then rename the directory `dir5` as `dir50`.
 
-ln  dir2/dir3/dir4/hi.txt hello
-title: ln
+with `mv` command we moved `hello.txt` under `dir4`, instead of accessing them as `dir2/dir3/dir4/hi.txt` everytime, we can create a link and after that, you can access or edit `dir2/dir3/dir4/hi.txt` file as simply hello
 
-Great! you have created a link. There are two types of links, hardlinks. where a same inode pointed by two different names and softlinks which work more like shortcuts.
+`ln  dir2/dir3/dir4/hi.txt hello`
+
+Great! you have created a link. There are two types of links, hardlinks. where a same __inode__ pointed by two different names and softlinks which work more like shortcuts.
 
 Hard links are created by default.
 
-stat hello
+`stat hello`
+
 and perform
 
-stat dir2/dir3/dir4/hi.txt
-see both uses same inode and link count shown as 2. Soft links are created using the s switch.
+`stat dir2/dir3/dir4/hi.txt`
 
-ln -s  dir2/dir3/dir4/hi.txt  softlink
+see both uses same inode and link count shown as 2. Soft links are created using the `-s` switch.
+
+`ln -s  dir2/dir3/dir4/hi.txt  softlink`
+
 again do
 
-stat softlink
-and examine its output.New inode is created for this new symbolic link "softlink" but link count remains as 1. To remove individual file use
+`stat softlink`
 
- rm -i file2.txt
-title: rm
+and examine its output. New inode is created for this new symbolic link "softlink" but link count remains as 1. To remove individual file use
 
-will prompt you with a message.rm: remove regular empty file 'file2.txt'? type y to delete the file.To remove directory, first remove it's contents using option "r",
+`rm -i file2.txt`
 
-rm -ri dir50/*
-Tips and tricks:
+will prompt you with a message. `rm: remove regular empty file 'file2.txt'`? type `y` to delete the file. To remove directory, first remove it's contents using option `-r`,
 
-If you want to remove files content without begin prompted for confirmation use -f option. It's extremely dangerous to use "rm -rf",because you may delete very important files by mistake-so make sure you delete correct files before running rm -rf"
+`rm -ri dir50/*`
 
-rm -rf junk/*
-rmdir  dir50
-rmdir will remove an empty directory. so thats end of lesson3. Good keep going :) Time for lesson4.
+**Tips and tricks**:
+
+If you want to remove files content without begin prompted for confirmation use `-f` option. It's **extremely dangerous** to use `rm -rf`, because you may delete very important files by mistake-so make sure you delete correct files before running `rm -rf`
+
+`rm -rf junk/*`
+`rmdir  dir50`
+
+`rmdir` will remove an empty directory. so thats end of lesson3. Good keep going :) Time for lesson4.
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 

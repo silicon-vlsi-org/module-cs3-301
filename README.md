@@ -434,28 +434,33 @@ Lets try this widely used
 
 `grep -r 'Hello'`
 
-By default grep is case sensitive (a is not the same as A) but you can ignore case by using the i switch
+By default grep is case sensitive (a is not the same as A) but you can ignore case by using the `-i` switch
 
-grep -i 'lINUX' hello
-Tips and tricks:
+`grep -i 'lINUX' hello`
+
+**Tips and tricks**:
 
 To display line numbers:
 
-grep -n 'linux' hello
+`grep -n 'linux' hello`
+
 To display lines that don't match the pattern:
 
-grep -v 'world' hello
-To count no.of words,lines and character on a file use wc hello title: wc
+`grep -v 'world' hello`
 
-thus wc counts lines/words/bytes in a file. first field is no.of lines , second column is no.of words and third column denotes no.of bytes.
+To count no. of words, lines and character on a file use `wc` hello title: `wc`
 
-Tips and tricks:
+thus `wc` counts lines/words/bytes in a file. first field is no. of lines, second column is no.of words and third column denotes no. of bytes.
 
-wc -L hello
-to find the length of longest line in the file.Lets create a file with some contents with echo.
+**Tips and tricks**:
 
-echo -e "col1 col2 r1\ncol5 col6 r2\ncol3 col4 r3 " >> new.txt
-echo -e "Hello\nlinux\nProgrammers paradise" >> linux.txt
+`wc -L hello`
+
+to find the length of longest line in the file. Lets create a file with some contents with echo.
+
+`echo -e "col1 col2 r1\ncol5 col6 r2\ncol3 col4 r3 " >> new.txt`
+`echo -e "Hello\nlinux\nProgrammers paradise" >> linux.txt`
+
 Okay,you have two files new.txt,linux.txt now,lets cut it ! :D
 
 cut -f1 -d' ' new.txt

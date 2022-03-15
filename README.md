@@ -3,7 +3,7 @@
 
 ## LESSONS
 
-### Lesson1 - Basic commands to navigate directories
+### Lesson 1 - Basic commands to navigate directories
 
 Simply type
 
@@ -424,17 +424,16 @@ Thanks, you have completed Lesson 4.
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 
-### Lesson5 - Manipulate or parse file contents
+### Lesson 5 - Manipulate or parse file contents
 
 Lets try this widely used
 
-grep "linux" hello
+`grep "linux" hello`
 
-title: grep
+`grep` searches for matching words or line on the file To search entire directory of files, supply the directory name
 
-grep searches for matching words or line on the file To search entire directory of files, supply the directory name
+`grep -r 'Hello'`
 
-grep -r 'Hello' .
 By default grep is case sensitive (a is not the same as A) but you can ignore case by using the i switch
 
 grep -i 'lINUX' hello

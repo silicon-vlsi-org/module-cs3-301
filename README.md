@@ -461,246 +461,250 @@ to find the length of longest line in the file. Lets create a file with some con
 `echo -e "col1 col2 r1\ncol5 col6 r2\ncol3 col4 r3 " >> new.txt`
 `echo -e "Hello\nlinux\nProgrammers paradise" >> linux.txt`
 
-Okay,you have two files new.txt,linux.txt now,lets cut it ! :D
+Okay,you have two files new.txt, linux.txt now, lets cut it ! :D
 
-cut -f1 -d' ' new.txt
-title: cut
+`cut -f1 -d' ' new.txt`
 
 So it extracted the first column from the file and to extract the third column
 
-cut -f3 -d' ' new.txt
+`cut -f3 -d' ' new.txt`
 
-As you have noticed -f can be used to mention the column number and -d is used to specify the delimiter.now we have seen how to cut a file lets check out the another one ,
+As you have noticed `-f` can be used to mention the column number and `-d` is used to specify the __delimiter__. Now we have seen how to cut a file lets check out the another one ,
 
-paste hello new.txt
-title: paste
+`paste hello new.txt`
 
 paste merges the lines of files
 
-Tips and tricks:
+**Tips and tricks**:
 
 to paste one file at time,
 
-paste -s hello new.txt
+`paste -s hello new.txt`
+
 In order to sort a file content, we could use
 
-sort new.txt
-title: sort
+`sort new.txt`
 
-File contents are sorted.Remember,we have two files new.txt and linux.txt.lets compare them
+File contents are sorted. Remember, we have two files `new.txt` and `linux.txt`. lets compare them
 
-diff hello linux.txt
-title: diff
+`diff hello linux.txt`
 
-File contents are sorted.Remember,we have two files new.txt and linux.txt.lets compare them
 
-diff hello linux.txt
-Compare files line by line. < denotes first file(hello) and > denotes second file(linux.txt). you can compare three files with
+Compare files line by line. `<` denotes first file(`hello`) and `>` denotes second file(`linux.txt`). you can compare three files with
 
-diff3 hello new.txt linux.txt
-title: diff3
+`diff3 hello new.txt linux.txt`
 
-I'll let you to analyze the output :D we have reached end of lesson5. move on to lesson6.
+I'll let you to analyze the output :D we have reached end of lesson-5. move on to lesson-6.
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 
-### Lesson6 - Changing file attributes
+### Lesson 6 - Changing file attributes
+
 Lets begin with a command that manipulates pathname,
 
-dirname dir2/dir3/dir4/hi.txt
-title: dirname
+`dirname dir2/dir3/dir4/hi.txt`
 
-strip non-directory suffix from path name ,gave you the output
+strip non-directory suffix from path name, gave you the output
 
-dir2/dir3/dir4
+`dir2/dir3/dir4`
+
 lets use the same path with different command this time
 
-basename dir2/dir3/dir4/hi.txt
-title: basename
+`basename dir2/dir3/dir4/hi.txt`
 
 this strips directory and suffix from pathname and gives the last entry.
 
-hi.txt
+`hi.txt`
+
 Pretty useful commands :D lets change file access permission
 
-chmod -v 666 file1.txt
-title: chmod
+`chmod -v 666 file1.txt`
 
-You should have seen a output like mode of file1.txt changed to 0666 (rw-rw-rw-)
+You should have seen a output like mode of `file1.txt changed to 0666 (rw-rw-rw-)`
 
-That will set the file "file1.txt" to be "world writeable".This means the owner, group and others can read and write into file. The same effect can be achived (remember you can verify it by using stat file1.txt) by
+That will set the file `file1.txt` to be "world writeable". This means the owner, group and others can read and write into file. The same effect can be achived (remember you can verify it by using stat file1.txt) by
 
-chmod a+rw file1.txt
+`chmod a+rw file1.txt`
+
 where as below makes it so that no one can read or write into this file, not even it's owner!
 
-chmod a-rw file1.txt
-with next command only owner can read or write into this file. chmod u+rw file1.txt. Tips and tricks: To change permission for more than one file use the -R switch
+`chmod a-rw file1.txt`
 
-chmod -R 644 ~/chmod_dir
-now to change file owner , chown root file1.txt title: chown
+with next command only owner can read or write into this file. 
 
-chown: changing ownership of file1.txt: Operation not permitted
+`chmod u+rw file1.txt` 
 
-oh,thats expected error message,you can use chown only as root user, but anyway thats the syntax/usage of chown command.Now we can change file owner and group,by chown root:staff file1.txt
+**Tips and tricks**: 
 
-Note: Rest of commands on lesson6 are expected to fail with below message, they are listed here for sake of completeness.
+To change permission for more than one file use the `-R` switch
 
-chown: changing ownership of file1.txt: Operation not permitted
+`chmod -R 644 ~/chmod_dir`
 
-This does the same, but additionally changes the group to "staff"
+now to change file owner, 
 
-Tips and tricks:
+`chown root file1.txt` 
 
-To change permission on all files and sub-directories, use the -R switch.
+`chown: changing ownership of file1.txt: Operation not permitted`
 
-chown root:staff -R ~/dir2
-Use option "--from" to change files that belongs to specific user group.
+oh,thats expected error message, you can use chown only as root user, but anyway thats the syntax/usage of chown command. Now we can change file owner and group, by 
 
-chown --from=webminal:webminal root:staff -R ~/dir2
-will change the files the belong to webminal user and webminal group to root and other user files left as it is.Lets change the group alone-
+`chown root:staff file1.txt`
 
-chgrp root file1.txt
-title: chgrp
+**Tips and tricks**:
 
-chgrp: changing group of `file1.txt': Operation not permitted
+To change permission on all files and sub-directories, use the `-R` switch.
+
+`chown root:staff -R ~/dir2 `
+
+Use option `--from` to change files that belongs to specific user group.
+
+`chown --from=webminal:webminal root:staff -R ~/dir2`
+
+will change the files the belong to `webminal` user and webminal group to root and other user files left as it is. Lets change the group alone.
+
+`chgrp root file1.txt`
+
+chgrp: changing group of `file1.txt`: Operation not permitted
+
 hehe..again thats expected error message :) ,you can use chgrp only as root user, but anyway thats the syntax/usage of chgrp command.
 
-Tips and tricks:
+**Tips and tricks**:
 
 To change the group of dir2 and subfiles to "root".
 
-chgrp -hR root dir2
+`chgrp -hR root dir2`
+
 Thats it we have completed lesson6.
 
-Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-### Lesson7 - Locate file and its type
+### Lesson 7 - Locate file and its type
+
 Often we need to figure out a file type,for such task, we can use
 
-file linux.txt
-title: file
+`file linux.txt`
 
 determines the type of a file as ASCII text
 
-file /dev/null
-/dev/null: characater special says,its a character device.
+`file /dev/null`
 
-Tips and tricks:
+`/dev/null`: characater special says,its a character device.
+
+**Tips and tricks**:
 
 You can also find about file system details of special devices. (below command listed here for sake of completeness, you will get permission denied error message)
 
-file -s /dev/sda2
-says /dev/sda2: x86 boot sector, code offset 0x52, OEM-ID "NTFS ", sectors/cluster 8, reserved sectors 0, Media descriptor 0xf8, heads 255, hidden sectors 161792, dos < 4.0 BootSector (0x80)
+`file -s /dev/sda2`
+
+says `/dev/sda2`: x86 boot sector, code offset 0x52, OEM-ID "NTFS ", sectors/cluster 8, reserved sectors 0, Media descriptor 0xf8, heads 255, hidden sectors 161792, dos < 4.0 BootSector (0x80)
 
 often we need to find the location of a certain file
 
-whereis ls
-title: whereis
+`whereis ls`
 
 you should see an output
 
-ls: /bin/ls /usr/share/man/man1p/ls.1p.gz /usr/share/man/man1/ls.1.gz
-whereis command will locate source files and binaries,lets see another example,finding source file
+`ls: /bin/ls /usr/share/man/man1p/ls.1p.gz /usr/share/man/man1/ls.1.gz`
 
-whereis stdio.h
+`whereis` command will locate source files and binaries, lets see another example, finding source file
+
+`whereis stdio.h`
+
 will give you
 
-stdio: /usr/include/stdio.h /usr/share/man/man3/stdio.3.gz
-Assume,you have installed two version a php (php4 and php5),when you simply type
+`stdio: /usr/include/stdio.h /usr/share/man/man3/stdio.3.gz`
 
-php
+Assume, you have installed two version a php (php4 and php5), when you simply type
+
+`php`
+
 which version will get executed?we don't know. In order to find it out,we use
 
-which php
-title: which
+`which php`
 
-To locate a binary file or if you have two version of a binary file installed ,you can find "which" one is currently used with this command.
 
-Can we use which command to search for a file on a given directory? No,we can't. "which" searches only pre-defined directories shown by echo $PATH.
+To locate a binary file or if you have two version of a binary file installed, you can find "which" one is currently used with this command.
+
+Can we use which command to search for a file on a given directory? No, we can't. "which" searches only pre-defined directories shown by echo $PATH.
 
 so in order to search a file on any directory,
 
-find ~ -name "linux.txt"
-title: find
+`find ~ -name "linux.txt"`
 
 Searches for files in a directory hierarchy.
 
-Tips and tricks:
+**Tips and tricks**:
 
 To find regular files and invoke the file command on the results, run
 
-find . -type f -exec file '{}' \;
+`find . -type f -exec file '{}' \;`
+
 To find regular files and display their attributes using the ls command, run
 
-find . -type f -exec ls -l '{}' \;
+`find . -type f -exec ls -l '{}' \;`
+
 To find files over 20 bytes in size and list them out, run
 
-find ~ -type f -size +20c -exec ls -hl {} \;
+`find ~ -type f -size +20c -exec ls -hl {} \;`
+
 What this last command does is left as an exercise for you.
 
-find ~ -type f -size +20c -exec cp dir1 {} \;
+`find ~ -type f -size +20c -exec cp dir1 {} \;`
+
 After you have practised above commands,move to our final lesson see you later.
 
-Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
+### Lesson 8 - System and user details
 
-### Lesson8 - System and user details
 Use below command to find out how long this system has been up and running,
 
-uptime
-title: uptime
+`uptime`
 
-uptime gives ,the current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5,and 15 minutes.
+uptime gives, the current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5,and 15 minutes.
 
 To know current date and time simply use
 
-date
-title: date
+`date`
 
 Okay that display the current time of server running webminal.org website.
 
 To display details about currently logged users
 
-who
-title: who
+`who`
 
 can you see other linux users ? :)
 
-who -a
+`who -a`
+
 print information about users who are currently logged into the system. You can also use a single letter command,
 
-w
-title: w
+`w`
 
-see it gives more detailed informatio than who. w can display information about the users currently on the machine, and their processes.The header shows, in this order,the current time,how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes.
+see it gives more detailed informatio than who. `w` can display information about the users currently on the machine, and their processes.The header shows, in this order,the current time,how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes.
 
 Displays list of mounted file system
 
-mount
-title: mount
+`mount`
 
 provides list of mounted file systems.
 
-Tips and tricks:
+**Tips and tricks**:
 
-to view only ext4 file system,
+to view only `ext4` file system,
 
-mount -t ext4
+`mount -t ext4`
+
 to display free disk space on mounted devices.
 
-df -h
-title: df
+`df -h`
 
--h switch makes the output more headable for humans. so we found df finds disk usage,but to find memory usage,we need to use
+`-h` switch makes the output more headable for humans. so we found `df` finds disk usage, but to find memory usage, we need to use
 
-free -m
-title: free
+`free -m`
 
 displays the total amount of free and used physical and swap memory in the system, as well as the buffers used by the kernel.
 
 Wow!Cool,
 
 You have completed the lesson.
-Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 

@@ -1,5 +1,10 @@
 # CS3.301 Introduction to Linux Commands
 
+This module introduces Linux commands to beginers. Intermediate and experts can go through this module slectively.
+
+**TOC**
+- [LESSONS](## LESSONS)
+  - [Lesson 1](### Lesson 1)
 
 ## LESSONS
 
@@ -152,6 +157,7 @@ To view only first two lines from the file
 
 `head -2 hello.txt`
 `title: head`
+
 
 see, it showed us first two lines from files. By **default**, `head` will display the first 10 lines when you run,
 
@@ -707,4 +713,5 @@ Wow!Cool,
 
 You have completed the lesson.
 
-
+### Lesson 9 - Make file 
+TBD

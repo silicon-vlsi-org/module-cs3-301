@@ -3,8 +3,8 @@
 This module introduces Linux commands to beginers. Intermediate and experts can go through this module slectively.
 
 **TOC**
-- [LESSONS](###lesson-1)
-  - [Lesson 1]()
+- [LESSONS](##lessons)
+  - [Lesson 1](###lesson-8)
 
 ## LESSONS
 

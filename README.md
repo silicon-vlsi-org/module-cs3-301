@@ -4,7 +4,7 @@ This module introduces Linux commands to beginers. Intermediate and experts can 
 
 **TOC**
 - [LESSONS](#lessons)
-  - [Lesson 1](#lesson-9)
+  - [Lesson 1](#Lesson-1---basic-commands-to-navigate-directories)
 
 ## LESSONS
 

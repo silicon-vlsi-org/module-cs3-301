@@ -4,7 +4,7 @@ This module introduces Linux commands to beginers. Intermediate and experts can 
 
 **TOC**
 - [LESSONS](#lessons)
-  - [Lesson 1](#lesson-8)
+  - [Lesson 1](#lesson-9)
 
 ## LESSONS
 
@@ -713,5 +713,5 @@ Wow!Cool,
 
 You have completed the lesson.
 
-### Lesson 9 - Make file 
+### Lesson 9
 TBD

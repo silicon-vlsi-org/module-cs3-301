@@ -5,6 +5,7 @@ This module introduces Linux commands to beginers. Intermediate and experts can 
 **TOC**
 - [LESSONS](#lessons)
   - [Lesson 1](#Lesson-1---basic-commands-to-navigate-directories)
+  - [Lesson 2](#Lesson-2---Create-files,-display-contents-and-stats)
 
 ## LESSONS
 
@@ -97,7 +98,7 @@ That's it.You have successfully completed lesson1 Now to start next lesson.
 
 Just type `vimtutor`, if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-### Lesson2 - Create files, display contents and stats
+### Lesson 2 - Create files, display contents and stats
 
 During Lesson1,you have learned how to create directories.
 

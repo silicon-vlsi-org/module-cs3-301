@@ -205,8 +205,9 @@ Now move to lesson-3.
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
+[BACK TO TOC](#TOC)
 
-## Lesson3 - Copy, rename, delete files
+## Lesson 3 - Copy, rename, delete files
 
 On Lesson-1, you learned about directories. With Lesson-2, you learned about files. Now lets learn general file operations.
 
@@ -323,7 +324,9 @@ If you want to remove files content without begin prompted for confirmation use 
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-## Lesson4 - Basic process commands
+[BACK TO TOC](#TOC)
+
+## Lesson 4 - Basic process commands
 
 In Lesson 1, you learned about directories. With Lesson 2, you learned about files. With Lesson 3, you have learned about Copying,renaming,deleting files. Now lets learn basic process-related commands.
 
@@ -439,6 +442,7 @@ Thanks, you have completed Lesson 4.
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
+[BACK TO TOC](#TOC)
 
 ## Lesson 5 - Manipulate or parse file contents
 
@@ -514,6 +518,7 @@ I'll let you to analyze the output :D we have reached end of lesson-5. move on t
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
+[BACK TO TOC](#TOC)
 
 ## Lesson 6 - Changing file attributes
 
@@ -593,6 +598,7 @@ To change the group of dir2 and subfiles to "root".
 
 Thats it we have completed lesson6.
 
+[BACK TO TOC](#TOC)
 
 ## Lesson 7 - Locate file and its type
 
@@ -669,6 +675,8 @@ What this last command does is left as an exercise for you.
 
 After you have practised above commands,move to our final lesson see you later.
 
+[BACK TO TOC](#TOC)
+
 ## Lesson 8 - System and user details
 
 Use below command to find out how long this system has been up and running,
@@ -722,6 +730,8 @@ displays the total amount of free and used physical and swap memory in the syste
 Wow!Cool,
 
 You have completed the lesson.
+
+[BACK TO TOC](#TOC)
 
 ## Lesson 9 - Make file
 

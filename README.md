@@ -105,6 +105,8 @@ That's it.You have successfully completed lesson1 Now to start next lesson.
 
 Just type `vimtutor`, if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
+[BACK TO TOC](#TOC)
+
 ## Lesson 2 - Create files, display contents and stats
 
 During Lesson1,you have learned how to create directories.

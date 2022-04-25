@@ -2,14 +2,21 @@
 
 This module introduces Linux commands to beginers. Intermediate and experts can go through this module slectively.
 
-**TOC**
+# TOC
+
 - [LESSONS](#lessons)
-  - [Lesson 1](#Lesson-1---basic-commands-to-navigate-directories)
-  - [Lesson 2](#Lesson-2---Create-files-display-contents-and-stats)
+  - [Lesson 1](#Lesson-1---basic-commands-to-navigate-directories): Basic commands to navigate directories.
+  - [Lesson 2](#Lesson-2---Create-files-display-contents-and-stats): Create files, display contents and stats.
+  - [Lesson 3](#Lesson-3---Copy-rename-delete-files): Copy, rename, delete files.
+  - [Lesson 4](#Lesson-4---Basic-process-commands): Basic process commands.
+  - [Lesson 5](#Lesson-5---Manipulate-or-parse-file-contents): Manipulate or parse file contents.
+  - [Lesson 6](#Lesson-6---Changing-file-attributes): Changing file attributes.
+  - [Lesson 7](#Lesson-7---Locate-file-and-its-type): Locate file and its type.
+  - [Lesson 8](#Lesson-8---System-and-user-details): System and user details.
 
-## LESSONS
+# LESSONS
 
-### Lesson 1 - Basic commands to navigate directories
+## Lesson 1 - Basic commands to navigate directories
 
 Simply type
 
@@ -98,7 +105,7 @@ That's it.You have successfully completed lesson1 Now to start next lesson.
 
 Just type `vimtutor`, if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-### Lesson 2 - Create files, display contents and stats
+## Lesson 2 - Create files, display contents and stats
 
 During Lesson1,you have learned how to create directories.
 
@@ -197,7 +204,7 @@ Now move to lesson-3.
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 
-### Lesson3 - Copy, rename, delete files
+## Lesson3 - Copy, rename, delete files
 
 On Lesson-1, you learned about directories. With Lesson-2, you learned about files. Now lets learn general file operations.
 
@@ -314,7 +321,7 @@ If you want to remove files content without begin prompted for confirmation use 
 
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
-### Lesson4 - Basic process commands
+## Lesson4 - Basic process commands
 
 In Lesson 1, you learned about directories. With Lesson 2, you learned about files. With Lesson 3, you have learned about Copying,renaming,deleting files. Now lets learn basic process-related commands.
 
@@ -431,7 +438,7 @@ Thanks, you have completed Lesson 4.
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 
-### Lesson 5 - Manipulate or parse file contents
+## Lesson 5 - Manipulate or parse file contents
 
 Lets try this widely used
 
@@ -506,7 +513,7 @@ I'll let you to analyze the output :D we have reached end of lesson-5. move on t
 Just type 'vimtutor', if you want to learn about vim text editor. If you want to change colors, please visit 'play' menu and view first screencast.
 
 
-### Lesson 6 - Changing file attributes
+## Lesson 6 - Changing file attributes
 
 Lets begin with a command that manipulates pathname,
 
@@ -585,7 +592,7 @@ To change the group of dir2 and subfiles to "root".
 Thats it we have completed lesson6.
 
 
-### Lesson 7 - Locate file and its type
+## Lesson 7 - Locate file and its type
 
 Often we need to figure out a file type,for such task, we can use
 
@@ -660,7 +667,7 @@ What this last command does is left as an exercise for you.
 
 After you have practised above commands,move to our final lesson see you later.
 
-### Lesson 8 - System and user details
+## Lesson 8 - System and user details
 
 Use below command to find out how long this system has been up and running,
 
@@ -714,5 +721,6 @@ Wow!Cool,
 
 You have completed the lesson.
 
-### Lesson 9
+## Lesson 9 - Make file
+
 TBD

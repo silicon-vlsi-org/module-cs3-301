@@ -4,7 +4,7 @@ This module introduces Linux commands to beginers. Intermediate and experts can 
 
 1. Register for a free account at [https://webminal.org](https://webminal.org) and using the **in-browser terminal**, complete the lessons 1-8. 
 2. If you are using a Windows desktop/laptop, dowload and install [VirtualBox](https://virtualbox.org) and install a Linux distro on it eg. Ubuntu. Use the linux Virtual Machine (VM) to go through the lessons.
-3. If you are using Windows 10 or 11, [Windows Subsystem for Linux (WSL)]9https://docs.microsoft.com/en-us/windows/wsl/install) is a great option.
+3. If you are using Windows 10 or 11, [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/install) is a great option.
 
 # TOC
 
